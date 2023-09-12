@@ -141,7 +141,7 @@ document.addEventListener('keyup', control);
 
 function rotate(){
     undraw();
-    currentPosition ++
+    currentRotation ++
     if(currentRotation === current.length){//si la rotacion alcanzo el maximo vuelve a 1
         currentRotation=0;
     }
