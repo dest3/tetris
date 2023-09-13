@@ -1,37 +1,82 @@
-.container{
-    display: flex;
-    
+body{
+    background-color:gray;
 }
-.grid{
-    width: 200px;
-    height: 400px;
-    background-color: aquamarine;
-    display: flex;
-    flex-wrap: wrap;
+.juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  
+}
+
+.container {
+  display: flex;
+}
+
+.datos {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.grid {
+  width: 200px;
+  height: 400px;
+  background-color: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .grid div {
-    height: 20px;
-    width: 20px;
-    outline: 1px solid black;
+  height: 20px;
+  width: 20px;
+  outline: 1px solid black;
+  box-shadow: inset;
 }
 
-.tetromino{
-    background-color: blueviolet;
+.tetromino {
+  background-color: blueviolet;
 }
 
-.mini-grid{
-    margin-left: 20px;
+.mini-grid {
+
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: yellow;
+}
+
+.mini-grid div {
+  height: 20px;
+  width: 20px;
+  outline: 1px solid black;
+}
+
+.nivelBX{
     width: 80px;
-    height: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: yellow;
+    height: 50px;
+    background-color: azure;
+    outline: 1px solid black;
+    margin: 10px;
+    text-align: left;
 }
 
-
-.mini-grid div{
-    height: 20px;
-    width: 20px;
-
+.lineasBX{
+    width: 80px;
+    height: 50px;
+    background-color: azure;
+    outline: 1px solid black;
+    margin: 10px;
+    text-align: left;
+}
+.scoreBX{
+    width: 80px;
+    height: 50px;
+    background-color: azure;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: left;
 }

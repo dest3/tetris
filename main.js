@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let squares = Array.from(grid.querySelectorAll("div")); // Seleccionar todos los div dentro de .grid
   let nextRandom = 0;
   let score = 0;
+  let lvl=0;
+  let liines=0;
 
   const color = [
     //colores de los tetrominos en orden
@@ -129,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       displayShape();
       addScore();
       gameOver();
+      addLevel();
     }
   }
 
@@ -224,24 +227,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  //agrega puntos
-  function addScore() {
-    for (let i = 0; i < 199; i += width) {
+  // Función para gestionar el puntaje y la eliminación de filas completas
+function addScore() {
+    for (let i = 0; i < 199; i += width) {//recorre todos las casillas del tablero (divs)
+      // Crear un array 'row' que representa una fila completa
       const row = [i, i + 1, i + 2, i + 3, i + 4, i + 6, i + 7, i + 8, i + 9];
+  
+      // Verificar si todas las celdas en 'row' están marcadas como 'taken'
       if (row.every((index) => squares[index].classList.contains("taken"))) {
+        // Incrementar el puntaje en 10 puntos
         score += 10;
+        // Actualizar la pantalla de puntaje
         scoreDisplay.innerHTML = score;
+  
+        // Remover las clases y el color de fondo de las celdas en 'row'
         row.forEach((index) => {
           squares[index].classList.remove("taken");
           squares[index].classList.remove("tetromino");
           squares[index].style.backgroundColor = "";
         });
+  
+        // Eliminar la fila completa del tablero
         const squareRemoved = squares.splice(i, width);
         squares = squareRemoved.concat(squares);
         squares.forEach((cell) => grid.appendChild(cell));
       }
     }
   }
+  
   //game over
 
   function gameOver() {
