@@ -1,82 +1,116 @@
-body{
-    background-color:gray;
-}
-.juego {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
+/* Declaración de las variables para los colores */
+:root {
+    --black: #020200;
+    --background: #e8eac1;
+    --color1: #1e606e;
+    --color2: #c4f0c2;
+    --light: #5ab9a8;
+  }
   
-}
-
-.container {
-  display: flex;
-}
-
-.datos {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding: 10px;
-}
-
-.grid {
-  width: 200px;
-  height: 400px;
-  background-color: aquamarine;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.grid div {
-  height: 20px;
-  width: 20px;
-  outline: 1px solid black;
-  box-shadow: inset;
-}
-
-.tetromino {
-  background-color: blueviolet;
-}
-
-.mini-grid {
-
-  width: 80px;
-  height: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: yellow;
-}
-
-.mini-grid div {
-  height: 20px;
-  width: 20px;
-  outline: 1px solid black;
-}
-
-.nivelBX{
+  body {
+    background-color: var(--background);
+  }
+  
+  .juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .container {
+    display: flex;
+    
+  }
+  
+  .datos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--black);
+    outline-offset: 2px ;
+    outline: 1px solid var(--background);
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+  
+  .grid {
+    width: 200px;
+    height: 400px;
+    background-color: var(--color1); 
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid div {
+    height: 20px;
+    width: 20px;
+    outline: 1px solid var(--background);
+    box-shadow: inset;
+  }
+  
+  .tetromino {
+    background-color: var(--color2); 
+  }
+  
+  .mini-grid {
     width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--background); 
+    outline-offset: 2px ;
+    outline: 3px solid var(--background);
+    border-radius: 5px;
+  }
+  
+  .mini-grid div {
+    height: 20px;
+    width: 20px;
+    outline: 1px solid #2d1b00;
+  }
+  
+  
+  .lineasBX {
+    width: 90px;
     height: 50px;
-    background-color: azure;
-    outline: 1px solid black;
+    background-color:var(--background);
+    outline: 3px solid var(--background);
     margin: 10px;
     text-align: left;
+    border-radius: 5px;
+    outline-offset: 3px;
 }
-
-.lineasBX{
-    width: 80px;
+  .nivelBX {
+    width: 90px;
     height: 50px;
-    background-color: azure;
-    outline: 1px solid black;
+    background-color:var(--background);
+    outline: 3px solid var(--background);
     margin: 10px;
     text-align: left;
+    border-radius: 5px;
+    outline-offset: 3px;
 }
-.scoreBX{
-    width: 80px;
+  .scoreBX {
+    width: 90px;
     height: 50px;
-    background-color: azure;
-    border: 1px solid black;
+    background-color:var(--background);
+    outline: 3px solid var(--background);
     margin: 10px;
     text-align: left;
+    border-radius: 5px;
+    outline-offset: 3px;
+}
+  
+#start_button{
+    width: 100px;
+    height: 50px;
+    outline-offset: 2px ;
+    outline: 1px solid var(--background);
+    border-radius: 4px;
+    margin-top: 150px;
+    margin-right: 5px;
 }

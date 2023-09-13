@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       displayShape();
       addScore();
       gameOver();
-      addLevel();
+    //   addLevel();
     }
   }
 
